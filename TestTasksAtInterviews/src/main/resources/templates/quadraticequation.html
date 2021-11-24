@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="ru">
+<head>
+    <title>Решение квадратного уравнения</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-md">
+    <br/>
+    <a class="list-group-item list-group-item-action" th:href="@{'/'}">Вернуться к списку</a>
+    <br/>
+    <h3 class="p-3 mb-2 bg-primary text-white">Решение квадратного уравнения: AX<sup><small>2</small></sup>+BX+C=0</h3>
+    <form th:action="@{/quadraticequation}" th:object="${quadraticEquationDTO}" method="POST">
+        Введите коэффициенты:
+        <br>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">A:</span>
+            <input type="text" th:field="*{paramA}"/>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">B:</span>
+            <input type="text" th:field="*{paramB}"/>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">C:</span>
+            <input type="text" th:field="*{paramC}"/>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Вычислить"/>
+    </form>
+    <br/>
+    <div th:if="${not #lists.isEmpty(results)}">
+        <h3 class="p-3 mb-2 bg-primary text-white">Результаты вычислений:</h3>
+        <table class="table table-striped table-hover" border="1">
+            <tr class="table-ligth">
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>Результат</th>
+            </tr>
+            <tr th:each="result : ${results}">
+                <td th:utext="${result.paramA}">...</td>
+                <td th:utext="${result.paramB}">...</td>
+                <td th:utext="${result.paramC}">...</td>
+                <td th:utext="${result.result}">...</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
