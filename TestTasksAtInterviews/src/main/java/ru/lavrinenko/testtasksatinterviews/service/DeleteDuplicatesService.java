@@ -40,9 +40,9 @@ public class DeleteDuplicatesService {
     return getResults();
   }
 
-  private void saveResult(DeleteDuplicatesDTO deleteDuplicatesDTO){
-      deleteDuplicatesRepository.save(deleteDuplicatesMapper.getDeleteDuplicates(algorithmsService.deleteDuplicates(deleteDuplicatesDTO)));
-      log.info(deleteDuplicatesDTO.toString() + ": Запись добавлена в БД.");
+  private void saveResult(DeleteDuplicatesDTO deleteDuplicatesDTO) {
+    deleteDuplicatesRepository.save(deleteDuplicatesMapper.getDeleteDuplicates(algorithmsService.deleteDuplicates(deleteDuplicatesDTO)));
+    log.info(deleteDuplicatesDTO.toString() + ": Запись добавлена в БД.");
   }
 
 }

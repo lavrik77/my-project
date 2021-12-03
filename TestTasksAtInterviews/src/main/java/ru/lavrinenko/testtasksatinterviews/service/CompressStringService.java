@@ -40,7 +40,7 @@ public class CompressStringService {
     return getResults();
   }
 
-  private void saveResult(CompressStringDTO compressStringDTO){
+  private void saveResult(CompressStringDTO compressStringDTO) {
     try {
       compressStringRepository.save(compressStringMapper.getCompressString(algorithmsService.compressString(compressStringDTO)));
       log.info(compressStringDTO.toString() + ": Запись добавлена в БД.");

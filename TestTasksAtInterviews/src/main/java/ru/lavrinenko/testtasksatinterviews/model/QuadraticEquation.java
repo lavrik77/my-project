@@ -1,12 +1,21 @@
 package ru.lavrinenko.testtasksatinterviews.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
-public class QuadraticEquation {
+public class QuadraticEquation implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,45 +24,4 @@ public class QuadraticEquation {
   private Double paramB;
   private Double paramC;
   private String result;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Double getParamA() {
-    return paramA;
-  }
-
-  public void setParamA(Double paramA) {
-    this.paramA = paramA;
-  }
-
-  public Double getParamB() {
-    return paramB;
-  }
-
-  public void setParamB(Double paramB) {
-    this.paramB = paramB;
-  }
-
-  public Double getParamC() {
-    return paramC;
-  }
-
-  public void setParamC(Double paramC) {
-    this.paramC = paramC;
-  }
-
-  public String getResult() {
-    return result;
-  }
-
-  public void setResult(String result) {
-    this.result = result;
-  }
-
 }

@@ -28,7 +28,7 @@ public class QuadraticEquationController {
 
     if (quadraticEquationDTO.getParamA() == null || quadraticEquationDTO.getParamA() == 0) {
       List<String> errorsList = new ArrayList<>();
-      errorsList.add("Коэффициент А не может равняться 0!");
+      errorsList.add("Коэффициент А не может быть null или равен 0!");
       model.addAttribute("errors", errorsList);
       return "quadraticequation";
     }

@@ -9,11 +9,11 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface QuadraticEquationMapper {
 
-  QuadraticEquationDTO getResultDTO(QuadraticEquation result);
+  QuadraticEquationDTO getResultDTO(QuadraticEquation quadraticEquation);
 
-  List<QuadraticEquationDTO> getResultListDTO(List<QuadraticEquation> results);
+  List<QuadraticEquationDTO> getResultListDTO(List<QuadraticEquation> quadraticEquations);
 
-  QuadraticEquation getResult(QuadraticEquationDTO resultDTO);
+  QuadraticEquation getResult(QuadraticEquationDTO quadraticEquationDTO);
 
-  List<QuadraticEquation> getResultList(List<QuadraticEquationDTO> resultsDTO);
+  List<QuadraticEquation> getResultList(List<QuadraticEquationDTO> quadraticEquationsDTO);
 }

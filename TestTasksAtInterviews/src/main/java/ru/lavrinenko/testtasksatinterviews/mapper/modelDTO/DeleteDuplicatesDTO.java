@@ -1,28 +1,20 @@
 package ru.lavrinenko.testtasksatinterviews.mapper.modelDTO;
 
-public class DeleteDuplicatesDTO {
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+
+@Getter
+@Setter
+public class DeleteDuplicatesDTO implements Serializable {
+
   private String inputStr;
   private String resultStr;
 
-  public String getInputStr() {
-    return inputStr;
-  }
-
-  public void setInputStr(String inputStr) {
-    this.inputStr = inputStr;
-  }
-
-  public String getResultStr() {
-    return resultStr;
-  }
-
-  public void setResultStr(String resultStr) {
-    this.resultStr = resultStr;
-  }
-
   @Override
-  public String toString () {
-    return getInputStr() + "->" + getResultStr();
+  public String toString() {
+    return inputStr + " -> " + resultStr;
   }
 
 }

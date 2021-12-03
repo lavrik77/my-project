@@ -1,40 +1,25 @@
 package ru.lavrinenko.testtasksatinterviews.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
-public class CompressString {
+public class CompressString implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String inputStr;
   private String resultStr;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getInputStr() {
-    return inputStr;
-  }
-
-  public void setInputStr(String inputStr) {
-    this.inputStr = inputStr;
-  }
-
-  public String getResultStr() {
-    return resultStr;
-  }
-
-  public void setResultStr(String resultStr) {
-    this.resultStr = resultStr;
-  }
 }
