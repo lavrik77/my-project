@@ -31,15 +31,15 @@ public class QuadraticEquationService {
     return quadraticEquationMapper.getResultListDTO(quadraticEquationRepository.findAll());
   }
 
-  public List<QuadraticEquationDTO> getResults(QuadraticEquationDTO QuadraticEquationDTO) {;
+  public List<QuadraticEquationDTO> getResults(QuadraticEquationDTO QuadraticEquationDTO) {
     saveResult(QuadraticEquationDTO);
     return getResults();
   }
 
-  private void saveResult(QuadraticEquationDTO QuadraticEquationDTO){
+  private void saveResult(QuadraticEquationDTO quadraticEquationDTO) {
     try {
-      quadraticEquationRepository.save(quadraticEquationMapper.getResult(algorithmsService.calculate(QuadraticEquationDTO)));
-      log.info(QuadraticEquationDTO.toString() + " сохранены в БД.");
+      quadraticEquationRepository.save(quadraticEquationMapper.getResult(algorithmsService.calculate(quadraticEquationDTO)));
+      log.info(quadraticEquationDTO.toString() + " сохранены в БД.");
     } catch (Exception e) {
       e.printStackTrace();
     }

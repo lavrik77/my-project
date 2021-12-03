@@ -55,7 +55,7 @@ class AlgorithmsServiceTest {
     } catch (Exception e) {
       e.printStackTrace();
     }
-    Exception exception = assertThrows(Exception.class, () -> algorithmsService.calculate(getQuadraticEquationDTO(0,1,1)));
+    Exception exception = assertThrows(Exception.class, () -> algorithmsService.calculate(getQuadraticEquationDTO(0, 1, 1)));
     assertEquals("Коэффициент а = 0. Решение уравнения невозможно!!!", exception.getMessage());
   }
 }

@@ -20,13 +20,13 @@ public class AlgorithmsServiceImpl implements AlgorithmsService {
             .sorted().toArray();
     StringBuilder output = new StringBuilder();
 
-    for (int i=0; i<arr.length; i++) {
+    for (int i = 0; i < arr.length; i++) {
       if (i == (arr.length - 1) || arr[i] != arr[i + 1]) {
-        output.append(" " + arr[i] + ",");
+        output.append(" ").append(arr[i]).append(",");
       }
     }
 
-    deleteDuplicatesDTO.setResultStr(output.deleteCharAt(output.length()-1).toString().trim());
+    deleteDuplicatesDTO.setResultStr(output.deleteCharAt(output.length() - 1).toString().trim());
     return deleteDuplicatesDTO;
   }
 
@@ -34,12 +34,13 @@ public class AlgorithmsServiceImpl implements AlgorithmsService {
     String input = compressStringDTO.getInputStr();
     StringBuilder output = new StringBuilder();
     int count = 1;
-    for(int i=0; i<input.length(); i++) {
+    for (int i = 0; i < input.length(); i++) {
       char ch = input.charAt(i);
-      if(validCharactersForCompressString.indexOf(ch) == -1) throw new Exception("Строка содержит недопустимые символы!") ;
-      if(i==input.length()-1 || ch!=input.charAt(i+1)){
-        output.append(count > 1 ? ch + String.valueOf(count): ch);
-        count=0;
+      if (validCharactersForCompressString.indexOf(ch) == -1)
+        throw new Exception("Строка содержит недопустимые символы!");
+      if (i == input.length() - 1 || ch != input.charAt(i + 1)) {
+        output.append(count > 1 ? ch + String.valueOf(count) : ch);
+        count = 0;
       }
       count++;
     }
