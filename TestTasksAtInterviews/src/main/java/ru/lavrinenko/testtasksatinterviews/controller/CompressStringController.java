@@ -5,10 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.CompressStringDTO;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.QuadraticEquationDTO;
+import ru.lavrinenko.modeldto.CompressStringDTO;
 import ru.lavrinenko.testtasksatinterviews.service.CompressStringService;
-import ru.lavrinenko.testtasksatinterviews.service.QuadraticEquationService;
 
 @Controller
 public class CompressStringController {

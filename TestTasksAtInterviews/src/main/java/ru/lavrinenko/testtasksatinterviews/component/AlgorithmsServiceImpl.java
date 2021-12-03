@@ -2,9 +2,9 @@ package ru.lavrinenko.testtasksatinterviews.component;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.CompressStringDTO;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.DeleteDuplicatesDTO;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.QuadraticEquationDTO;
+import ru.lavrinenko.modeldto.CompressStringDTO;
+import ru.lavrinenko.modeldto.DeleteDuplicatesDTO;
+import ru.lavrinenko.modeldto.QuadraticEquationDTO;
 
 import java.util.stream.Stream;
 
@@ -16,7 +16,7 @@ public class AlgorithmsServiceImpl implements AlgorithmsService {
 
   public DeleteDuplicatesDTO deleteDuplicates(DeleteDuplicatesDTO deleteDuplicatesDTO) {
     int[] arr = Stream.of(deleteDuplicatesDTO.getInputStr().split(","))
-            .mapToInt(s-> Integer.parseInt(s.trim()))
+            .mapToInt(s -> Integer.parseInt(s.trim()))
             .sorted().toArray();
     StringBuilder output = new StringBuilder();
 

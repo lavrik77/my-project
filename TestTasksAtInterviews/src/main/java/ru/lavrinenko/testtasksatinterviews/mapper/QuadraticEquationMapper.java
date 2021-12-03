@@ -1,7 +1,7 @@
 package ru.lavrinenko.testtasksatinterviews.mapper;
 
 import org.mapstruct.Mapper;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.QuadraticEquationDTO;
+import ru.lavrinenko.modeldto.QuadraticEquationDTO;
 import ru.lavrinenko.testtasksatinterviews.model.QuadraticEquation;
 
 import java.util.List;

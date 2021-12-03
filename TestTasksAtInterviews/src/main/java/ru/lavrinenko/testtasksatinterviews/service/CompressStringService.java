@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import ru.lavrinenko.testtasksatinterviews.component.AlgorithmsServiceImpl;
 import ru.lavrinenko.testtasksatinterviews.dao.CompressStringRepository;
 import ru.lavrinenko.testtasksatinterviews.mapper.CompressStringMapper;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.CompressStringDTO;
+import ru.lavrinenko.modeldto.CompressStringDTO;
 
 import java.util.List;
 

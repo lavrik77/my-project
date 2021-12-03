@@ -3,9 +3,9 @@ package ru.lavrinenko.testtasksatinterviews.component;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.CompressStringDTO;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.DeleteDuplicatesDTO;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.QuadraticEquationDTO;
+import ru.lavrinenko.modeldto.CompressStringDTO;
+import ru.lavrinenko.modeldto.DeleteDuplicatesDTO;
+import ru.lavrinenko.modeldto.QuadraticEquationDTO;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

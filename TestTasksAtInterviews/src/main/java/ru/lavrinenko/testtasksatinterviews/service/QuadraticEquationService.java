@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import ru.lavrinenko.testtasksatinterviews.component.AlgorithmsServiceImpl;
 import ru.lavrinenko.testtasksatinterviews.dao.QuadraticEquationRepository;
 import ru.lavrinenko.testtasksatinterviews.mapper.QuadraticEquationMapper;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.QuadraticEquationDTO;
+import ru.lavrinenko.modeldto.QuadraticEquationDTO;
 
 import java.util.List;
 

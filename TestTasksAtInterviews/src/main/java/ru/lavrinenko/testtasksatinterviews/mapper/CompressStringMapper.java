@@ -1,7 +1,7 @@
 package ru.lavrinenko.testtasksatinterviews.mapper;
 
 import org.mapstruct.Mapper;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.CompressStringDTO;
+import ru.lavrinenko.modeldto.CompressStringDTO;
 import ru.lavrinenko.testtasksatinterviews.model.CompressString;
 
 import java.util.List;

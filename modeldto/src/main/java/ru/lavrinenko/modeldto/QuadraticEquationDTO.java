@@ -1,4 +1,4 @@
-package ru.lavrinenko.testtasksatinterviews.mapper.modelDTO;
+package ru.lavrinenko.modeldto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import ru.lavrinenko.testtasksatinterviews.component.AlgorithmsServiceImpl;
 import ru.lavrinenko.testtasksatinterviews.dao.DeleteDuplicatesRepository;
 import ru.lavrinenko.testtasksatinterviews.mapper.DeleteDuplicatesMapper;
-import ru.lavrinenko.testtasksatinterviews.mapper.modelDTO.DeleteDuplicatesDTO;
+import ru.lavrinenko.modeldto.DeleteDuplicatesDTO;
 
 import java.util.List;
 

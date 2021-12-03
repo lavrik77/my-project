@@ -16,6 +16,7 @@
     <description>My project describing various technologies and types of tasks solved at interviews</description>
 
     <modules>
+        <module>modeldto</module>
         <module>testtasksatinterviews</module>
         <module>create-xlsx</module>
     </modules>
